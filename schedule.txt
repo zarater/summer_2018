@@ -1,7 +1,7 @@
-M:e:m:l;
-T:e:m:l;
-W:e:m:l;
-TH:e:m:l;
-F:e:m:l;
-SAT:e:m:l;
-SUN:e:m:l;
+MON:1;
+TUES:2;
+WED:3;
+THUR:4;
+FRI:5;
+SAT:6;
+SUN:7;
