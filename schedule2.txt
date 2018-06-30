@@ -1,7 +1,7 @@
-M:e:m:l;
-T:e:m:l;
-W:e:m:l;
-TH:e:m:l;
-F:e:m:l;
-SAT:e:m:l;
-SUN:e:m:l;
+M{e:some_event:m; some_event1:l; some_event1
+T{e:some_event:m; some_event1:l; some_event1
+W{e:some_event:m; some_event1:l; some_event1
+TH{e:some_event:m; some_event1:l; some_event1
+F{e:some_event:m; some_event1:l; some_event1
+SAT{e:some_event:m; some_event1:l; some_event1
+SUN{e:some_event:m; some_event1:l; some_event1
