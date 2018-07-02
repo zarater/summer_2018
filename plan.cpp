@@ -9,6 +9,8 @@ escheduled_event(NULL), mscheduled_event(NULL), lscheduled_event(NULL)
 
 schedule ::~schedule()
 {
+if(n==6)
+{
 	delete [] day;
 	delete[] e;
 	delete[] m;
@@ -16,6 +18,7 @@ schedule ::~schedule()
 	delete[] escheduled_event;
 	delete[] mscheduled_event;
 	delete[] lscheduled_event;
+}
 }
 
 int schedule :: extract()
@@ -127,7 +130,7 @@ int schedule:: display()
 	cin.ignore(100, '\n');
 	ctest = new char[strlen(test)];
 	strcpy(ctest, test);
-	//delete [] ctest;
+	delete [] ctest;
 
 	cout << "ctest" << ctest << endl;
 	return 1;
