@@ -55,7 +55,7 @@ int schedule :: extract()
 		file_in.get();
 		
 	set(a_day, a_e, a_m, a_l, a_escheduled_event, a_mscheduled_event, a_lscheduled_event,x);
-	display();
+	//display();
 		++x;
 
 	}
@@ -110,7 +110,7 @@ int schedule:: display()
 
 	return 1;
 }
-int schedule :: insert()
+int schedule :: insert()//write into it after receiving CLL and a of LLL
 {
 	ofstream file;
 	file.open("schedule2.txt");
@@ -149,4 +149,16 @@ return 1;
 int schedule :: remove()
 {
 return 1;
+}
+
+
+int schedule:: container(char containera[], char containerb[], char containerc[], char containerd[])
+{
+	if(day){delete day;}
+	day = new char [strlen(containera)];
+	strcpy(day, containera);
+	//TODO check if the CLL or a of LLL exist with same start/end times.
+	//if not make a new LL of the time and ADD() to the LL.
+
+	return 1;
 }

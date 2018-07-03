@@ -20,6 +20,7 @@ class schedule
 		int modify();
 		int search();
 		int remove();
+		int container(char containera[], char containerb[], char containerc[], char containerd[]);
 
 	protected:
 		int n;
