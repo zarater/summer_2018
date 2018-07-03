@@ -1,10 +1,10 @@
-#include "plan.h"
+#include "classes.h"
 
 
 int main()
 {
 	schedule file;
+	file.insert();
 	file.extract();
-//	file.display();
 	return 1;
 }

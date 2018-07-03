@@ -110,4 +110,12 @@ int schedule:: display()
 
 	return 1;
 }
+int schedule :: insert()
+{
+	ofstream file;
+	file.open("schedule2.txt");
+	file.close();
 
+
+	return 1;
+}

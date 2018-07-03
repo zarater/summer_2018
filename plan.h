@@ -5,17 +5,20 @@
 
 using namespace std;
 
+
 class schedule
 {
 	public:
 		schedule();
 		~schedule();
+		int insert();
 		int extract();//extracts from a file txt
 		int set(char a_day[],char a_e[], char a_m[], char a_l[], char a_escheduled_event[], char a_mscheduled_event[], char a_lscheduled_event[],  int x);
 		int display();
 
 	protected:
 		int n;
+		schedule *next;
 
 		char *day;
 		char *e;
