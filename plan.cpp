@@ -9,7 +9,7 @@ escheduled_event(NULL), mscheduled_event(NULL), lscheduled_event(NULL)
 
 schedule ::~schedule()
 {
-	cout << "n" << n << endl;
+	//cout << "n" << n << endl;
 	delete [] day;
 	delete[] e;
 	delete[] m;
@@ -39,6 +39,7 @@ int schedule :: extract()
 		cout << "error" <<endl;
 		
 	}
+
 	while(!file_in.eof())
 	{
 		file_in.get(a_day, 100, '{'); file_in.ignore();
@@ -53,7 +54,8 @@ int schedule :: extract()
 		file_in.get(a_lscheduled_event, 100, '\n'); file_in.ignore();
 		file_in.get();
 		
-	set(a_day, a_e, a_m, a_l, a_escheduled_event, a_mscheduled_event, a_lscheduled_event,x);	
+	set(a_day, a_e, a_m, a_l, a_escheduled_event, a_mscheduled_event, a_lscheduled_event,x);
+	display();
 		++x;
 
 	}

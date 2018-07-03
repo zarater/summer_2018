@@ -5,6 +5,6 @@ int main()
 {
 	schedule file;
 	file.extract();
-	file.display();
+//	file.display();
 	return 1;
 }
