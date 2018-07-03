@@ -114,8 +114,39 @@ int schedule :: insert()
 {
 	ofstream file;
 	file.open("schedule2.txt");
+	file << "this is" << ":" << " my text\n\n";
 	file.close();
 
 
 	return 1;
+}
+
+
+bool schedule ::check()
+{
+	//if(day != NULL){return true;}
+	
+	ifstream file_in;
+	file_in.open("schedule.txt");
+
+	if(!file_in)
+	{
+		return true;
+		
+	}
+	return false;
+}
+
+
+int schedule :: modify()
+{
+return 1;
+}
+int schedule :: search()
+{
+return 1;
+}
+int schedule :: remove()
+{
+return 1;
 }
