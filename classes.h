@@ -2,13 +2,12 @@
 
 //keeps track of all the classes
 //
-class room
+class room: public schedule
 {
 	public:
 		room();
 		~room();
 	protected:
-	schedule list;
 };
 
 class movietheater: public room
@@ -16,8 +15,11 @@ class movietheater: public room
 	public:
 		movietheater();
 		~movietheater();
-	protected:
+		int display();
 		int CLL();
+	protected:
+		char * m_day;
+		movietheater *head;
 		movietheater *next;
 
 };
