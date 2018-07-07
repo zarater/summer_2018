@@ -21,7 +21,8 @@ class schedule
 		int search();
 		int remove();
 		int container(char containera[], char containerb[], char containerc[], char containerd[]);
-
+		int container(schedule &);
+		int global_init();
 	protected:
 		int n;
 		schedule *next;

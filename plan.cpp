@@ -10,6 +10,8 @@ escheduled_event(NULL), mscheduled_event(NULL), lscheduled_event(NULL)
 schedule ::~schedule()
 {
 	//cout << "n" << n << endl;
+	if(day && e && m && l && escheduled_event && mscheduled_event && lscheduled_event)
+	{
 	delete [] day;
 	delete[] e;
 	delete[] m;
@@ -17,6 +19,7 @@ schedule ::~schedule()
 	delete[] escheduled_event;
 	delete[] mscheduled_event;
 	delete[] lscheduled_event;
+	}
 }
 
 int schedule :: extract()
@@ -107,6 +110,7 @@ int schedule:: display()
 	cout << "esched" << escheduled_event << endl;
 	cout << "msched" << mscheduled_event << endl;
 	cout << "lsched" << lscheduled_event << endl;
+	cout << "n: " << n << endl;
 
 	return 1;
 }
@@ -161,4 +165,20 @@ int schedule:: container(char containera[], char containerb[], char containerc[]
 	//if not make a new LL of the time and ADD() to the LL.
 
 	return 1;
+}
+int schedule :: container(schedule &source)
+{
+
+	if(day){delete day;}
+	day = new char [strlen(containera)];
+	strcpy(day, containera);
+	//TODO check if the CLL or a of LLL exist with same start/end times.
+	//if not make a new LL of the time and ADD() to the LL.
+
+	return 1;
+}
+
+int schedule :: global_init()
+{
+	return n;
 }

@@ -2,13 +2,17 @@
 
 //keeps track of all the classes
 //
-class room
+class room: public schedule
 {
+	
 	public:
 		room();
+		room(const room &);
 		~room();
+		int display();
+		int init(schedule & tocopy);
 	protected:
-	schedule list;
+//	schedule list;
 };
 
 class movietheater: public room
@@ -16,6 +20,7 @@ class movietheater: public room
 	public:
 		movietheater();
 		~movietheater();
+		int display();
 	protected:
 		int CLL();
 		movietheater *next;
