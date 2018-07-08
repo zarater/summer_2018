@@ -19,49 +19,6 @@ schedule ::~schedule()
 	delete[] lscheduled_event;
 }
 
-int schedule :: extract()
-{
-	char a_day[100];
-	char a_e[100];
-	char a_m[100];
-	char a_l[100];
-	char a_escheduled_event[100];
-	char a_mscheduled_event[100];
-	char a_lscheduled_event[100];
-
-	int x = 0;
-
-	ifstream file_in;
-	file_in.open("schedule.txt");
-
-	if(!file_in)
-	{
-		cout << "error" <<endl;
-		
-	}
-
-	while(!file_in.eof())
-	{
-		file_in.get(a_day, 100, '{'); file_in.ignore();
-		file_in.get(a_e, 100, ':'); file_in.ignore();
-
-		file_in.get(a_escheduled_event, 100, ':'); file_in.ignore();
-
-		file_in.get(a_m, 100, ':'); file_in.ignore();
-		file_in.get(a_mscheduled_event, 100, ':'); file_in.ignore();
-
-		file_in.get(a_l, 100, ':'); file_in.ignore();
-		file_in.get(a_lscheduled_event, 100, '\n'); file_in.ignore();
-		file_in.get();
-		
-	set(a_day, a_e, a_m, a_l, a_escheduled_event, a_mscheduled_event, a_lscheduled_event,x);
-	//display();
-		++x;
-
-	}
-	file_in.close();
-return 1;
-}
 
 int schedule :: set(char a_day[], char a_e[], char a_m[], char a_l[],  char a_escheduled_event[], char a_mscheduled_event[], char a_lscheduled_event[], int x)
 {
@@ -138,18 +95,6 @@ bool schedule ::check()
 }
 
 
-int schedule :: modify()
-{
-return 1;
-}
-int schedule :: search()
-{
-return 1;
-}
-int schedule :: remove()
-{
-return 1;
-}
 
 
 int schedule:: container(char containera[], char containerb[], char containerc[], char containerd[])

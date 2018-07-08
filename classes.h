@@ -1,13 +1,17 @@
 #include "plan.h"
 
 //keeps track of all the classes
-//
 class room: public schedule
 {
 	public:
 		room();
 		~room();
+		int modify(int finder);
+		int search();
+		int remove(int finder);
 	protected:
+		room *head;
+		room *next;
 };
 
 class movietheater: public room
@@ -18,9 +22,6 @@ class movietheater: public room
 		int display();
 		int CLL();
 	protected:
-		char * m_day;
-		movietheater *head;
-		movietheater *next;
 
 };
 class classroom: public room
